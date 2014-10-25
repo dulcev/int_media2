@@ -1,0 +1,94 @@
+body { background-color: #fff; }
+
+#container {
+	width: 100%;
+	background-color: #fff;
+	border-radius: 5px; 
+	padding: none;
+}
+
+header { padding: 10px; background-color: #fff; }
+nav { padding: 10px; background-color: #000; }
+article { padding: 10px; background-color: #fff; }
+aside { padding: 10px; background-color: #fff; }
+footer { padding: 10px; margin: px; background-color: #A3297A; color: #fff; }
+
+nav { text-align: right; }
+nav a {
+	display: inline-block;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background-color: #000;
+
+	text-decoration: none;
+	color: #fff;
+}
+nav a:hover { background-color: #fff; 
+				color: #000;
+				border-radius: 8px;}
+nav a.chosen { background-color: #fff;
+				color: #000; 
+				border-radius: 8px;
+				}
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+article {
+	width: 60%;
+	min-height: 500px;
+	float: left;
+}
+aside {
+	width: 40%;
+	float: right;
+}
+
+footer { clear:both; 
+		background-color: #000;}
+
+/*Gallery Styles*/
+body.gallery article {
+	width: 100%;
+}
+
+body.gallery .portfolio {
+	border:solid 10px #fff;
+	padding:10px;
+	text-align: center;
+}
+body.gallery img.large {
+	display: block;
+	margin: 25px auto;
+}
+
+body.gallery .portfolio img {
+	width: 30%;
+	max-width: ;
+	min-width: ;
+}
+
+
+/*Homie Styles*/
+body.home aside {
+	background-color: #fff;
+}
+
+
+h1 {font-size: 30px;
+	text-align: center;}
+
+a {font-color: #000;
+	text-decoration: none;}
+
+.portfolio
+
+p {font-size: 12px;
+	color: #fff;}
+
+img {width:100%;}
+.col-md-8 {width: 100%;}
