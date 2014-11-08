@@ -92,3 +92,12 @@ p {font-size: 12px;
 
 img {width:100%;}
 .col-md-8 {width: 100%;}
+
+.large img 
+{display:block;
+margin: 25px auto;}			
+
+.gallery img 
+{display:inline-block;
+position: relative;
+width: 125px;}
