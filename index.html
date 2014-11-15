@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>Kari Cakes Photography</title>
 		<link rel="stylesheet" type="text/css" href="_css/author.css">
+		<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 	</head>
 	<body>
 	
 		<div id="container">
-			
 
-			<nav>
-				<a href="index.html" class="chosen">Home</a>
-				<a href="portrait.html">Portraits</a>
-				<a href="landscape.html">Landscape</a>
-				<a href="event.html">Events</a>
+			<nav id="selectable">
+				<a href="index.html" class="chosen" class="ui-widget-content">Home</a>
+				<a href="portrait.html"  class="ui-widget-content">Portraits</a>
+				<a href="landscape.html" class="ui-widget-content">Landscape</a>
+				<a href="event.html"	 class="ui-widget-content">Events</a>
 			</nav>
 			
 			<article id="swap">
@@ -23,12 +24,13 @@
   				<div class="large">
 					<img src="_images/kari.jpg">
 				</div>
+				
 				<div class="gallery">
 					<img class="pic1" data-large="_images/kari.jpg" src="_images/kari1.jpg"  />
 					<img class="pic2" data-large="_images/kari2.jpg" src="_images/kari2b.jpg"  />
 					<img class="pic3" data-large="_images/kari3.jpg" src="_images/kari3b.jpg"  />
-					
 				</div>
+
 			</article>
 
   			</div>
@@ -61,6 +63,8 @@
 		<script type="text/javascript" src="_script/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript">
 
+		
+
 
 		//1. Setting and getting
 		var largepic = $(".large img");
@@ -69,7 +73,6 @@
 		var pic3 = $(".gallery .pic3");
 		
 		
-
 		//2. declaring function
 
 
@@ -102,29 +105,48 @@
 		image_swap(pic1); 
 		image_swap(pic2);
 		image_swap(pic3);
-		
-
-	</script>
 
 
-	<script type="text/javascript" src="_script/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript">
-
-	var person = {
-  		firstName : 'Kari',
-  		lastName : 'Cakes',
-  		greet : function(name) {
-    	log( 'Hi my Name is, ' + name );
-  		}
-		};
-
-		person.greet( person.firstName );
+		 $(function() {
+		 $( "#selectable" ).selectable();
+		 });
 
 
-		function addTwoNumbers(1, 4) {
-  		return a + b;
-		}
-		
+
+
+
+		 if(true){
+		 	// Do Something. 
+		 }
+
+		 var a = '';
+		if ( !a ) {
+  		// this code will run if a is falsy
+  		log( 'a was falsy' );
+				  }
+
+
+
+		var notANumber = 'four' - 'five';
+		if ( !notANumber ) {
+  		// this code will run
+  		log( '!notANumber was truthy' );
+							}
+
+
+
+		var notANumber = 'four' - 'five';
+		if ( notANumber == false ) {
+  		// this code will not run!
+ 		 log( 'notANumber was falsy' );
+			} else {
+  		// this code will run
+  		log( 'notANumber was truthy' );
+			}
+
+		document.getElementById("intro").style.color = "#fff";
+		document.getElementById("intro").style.backgroundColor = "#000";
+
 	</script>
 	
 	</body>

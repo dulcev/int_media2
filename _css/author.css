@@ -27,10 +27,9 @@ nav a {
 }
 nav a:hover { background-color: #fff; 
 				color: #000;
-				border-radius: 8px;}
+				}
 nav a.chosen { background-color: #fff;
 				color: #000; 
-				border-radius: 8px;
 				}
 
 * {
@@ -72,18 +71,16 @@ body.gallery .portfolio img {
 	min-width: ;
 }
 
-
 /*Homie Styles*/
 body.home aside {
 	background-color: #fff;
 }
 
-
 h1 {font-size: 30px;
 	text-align: center;}
 
 a {font-color: #000;
-	text-decoration: none;}
+   text-decoration: none;}
 
 .portfolio
 
@@ -101,3 +98,9 @@ margin: 25px auto;}
 {display:inline-block;
 position: relative;
 width: 125px;}
+
+#feedback { font-size: 1.4em; }
+#selectable .ui-selecting { background: #000; }
+#selectable .ui-selected { background: #000; color: white; }
+#selectable { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+#selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
