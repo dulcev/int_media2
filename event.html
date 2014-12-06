@@ -3,16 +3,19 @@
 	<head>
 		<title>Kari Cakes Photography</title>
 		<link rel="stylesheet" type="text/css" href="_css/author.css">
+		<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 	</head>
 	<body class="gallery">
 		<div id="container">
 			
-			<nav>
-				<a href="index.html">Home</a>
-				<a href="portrait.html">Portraits</a>
-				<a href="landscape.html">Landscape</a>
-				<a href="event.html" class="chosen">Events</a>
+			<nav id="selectable">
+				<a href="index.html"     class="ui-widget-content">Home</a>
+				<a href="portrait.html"  class="ui-widget-content">Portraits</a>
+				<a href="landscape.html" class="ui-widget-content">Landscape</a>
+				<a href="event.html"	 class="chosen" class="ui-widget-content">Events</a>
 			</nav>
+			
 			<article>
 				<h1>Events</h1>
 				
@@ -32,10 +35,12 @@
 				&copy; Dulce Velasco 2014. All rights reserved.
 			</footer>
 		</div>	
+			<script type="text/javascript" src="_script/jquery-1.11.1.min.js"></script>
+			<script type="text/javascript">
+
+				$(function() {
+		 		$( "#selectable" ).selectable();
+		 		});
+			</script>
 	</body>
 </html>
-
-
-
-
-

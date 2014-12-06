@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>Kari Cakes Photography</title>
 		<link rel="stylesheet" type="text/css" href="_css/author.css">
+		<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 	</head>
 	<body>
 	
 		<div id="container">
-			
 
-			<nav>
-				<a href="index.html" class="chosen">Home</a>
-				<a href="portrait.html">Portraits</a>
-				<a href="landscape.html">Landscape</a>
-				<a href="event.html">Events</a>
+			<nav id="selectable">
+				<a href="index.html" class="chosen" class="ui-widget-content">Home</a>
+				<a href="portrait.html"  class="ui-widget-content">Portraits</a>
+				<a href="landscape.html" class="ui-widget-content">Landscape</a>
+				<a href="event.html"	 class="ui-widget-content">Events</a>
 			</nav>
 			
 			<article id="swap">
@@ -23,12 +24,13 @@
   				<div class="large">
 					<img src="_images/kari.jpg">
 				</div>
+				
 				<div class="gallery">
 					<img class="pic1" data-large="_images/kari.jpg" src="_images/kari1.jpg"  />
 					<img class="pic2" data-large="_images/kari2.jpg" src="_images/kari2b.jpg"  />
 					<img class="pic3" data-large="_images/kari3.jpg" src="_images/kari3b.jpg"  />
-					
 				</div>
+
 			</article>
 
   			</div>
@@ -50,6 +52,11 @@
 					<br>
 					<b>https://www.facebook.com/KariCakesPhotography</b>
   				</p>
+
+  				<p>
+  				<iframe src="plugin.txt" width="100%" >
+				</iframe>
+  				</p>
   				
 			</aside>	
 			
@@ -61,24 +68,17 @@
 		<script type="text/javascript" src="_script/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript">
 
-
 		//1. Setting and getting
 		var largepic = $(".large img");
 		var pic1 = $(".gallery .pic1");
 		var pic2 = $(".gallery .pic2");
-		var pic3 = $(".gallery .pic3");
-		
-		
-
+		var pic3 = $(".gallery .pic3");		
 		//2. declaring function
-
 
 		function image_swap(this_image) {
 			//console.log(whichimage);
 
 		var switchh = this_image.attr('data-large'); 
-
-
 
 		function image_over() {
 			//console.log("i am working!!");
@@ -86,13 +86,10 @@
 		largepic.attr('src', switchh);
 	     }
 
-
 		function image_out() {
 			//console.log("i am working!!");
 		this_image.stop(true).animate({'top':'0px'},500);
         }
-
-
 
 		this_image.mouseover(image_over);
 		this_image.mouseout(image_out);
@@ -102,30 +99,11 @@
 		image_swap(pic1); 
 		image_swap(pic2);
 		image_swap(pic3);
-		
+
+		 $(function() {
+		 $( "#selectable" ).selectable();
+		 });
 
 	</script>
-
-
-	<script type="text/javascript" src="_script/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript">
-
-	var person = {
-  		firstName : 'Kari',
-  		lastName : 'Cakes',
-  		greet : function(name) {
-    	log( 'Hi my Name is, ' + name );
-  		}
-		};
-
-		person.greet( person.firstName );
-
-
-		function addTwoNumbers(1, 4) {
-  		return a + b;
-		}
-		
-	</script>
-	
 	</body>
 </html>
