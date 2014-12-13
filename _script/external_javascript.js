@@ -1,7 +1,4 @@
 
-		<script type="text/javascript" src="_script/jquery-1.11.1.min.js"></script>
-		<script type="text/javascript">
-
 		//1. Setting and getting
 		var largepic = $(".large img");
 		var pic1 = $(".gallery .pic1");
@@ -37,5 +34,3 @@
 		 $(function() {
 		 $( "#selectable" ).selectable();
 		 });
-
-	</script>
