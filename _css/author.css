@@ -103,3 +103,7 @@ width: 125px;}
 #selectable .ui-selected { background: #000; color: white; }
 #selectable { list-style-type: none; margin: 0; padding: 0; width: 100%; }
 #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+
+.ui-widget-content {border: 0px solid;
+					background-color: #000000;
+					}
