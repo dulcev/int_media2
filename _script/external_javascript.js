@@ -1,36 +1,40 @@
 
-		//1. Setting and getting
-		var largepic = $(".large img");
-		var pic1 = $(".gallery .pic1");
-		var pic2 = $(".gallery .pic2");
-		var pic3 = $(".gallery .pic3");		
-		//2. declaring function
+		$(document).ready(function () {
 
-		function image_swap(this_image) {
-			//console.log(whichimage);
+			//1. Setting and getting
+			var largepic = $(".large img");
+			var pic1 = $(".gallery .pic1");
+			var pic2 = $(".gallery .pic2");
+			var pic3 = $(".gallery .pic3");		
+			//2. declaring function
 
-		var switchh = this_image.attr('data-large'); 
+			function image_swap(this_image) {
+				//console.log(whichimage);
 
-		function image_over() {
-			//console.log("i am working!!");
-		this_image.stop(true).animate({'top':'-10px'},500);
-		largepic.attr('src', switchh);
-	     }
+			var switchh = this_image.attr('data-large'); 
 
-		function image_out() {
-			//console.log("i am working!!");
-		this_image.stop(true).animate({'top':'0px'},500);
-        }
+			function image_over() {
+				//console.log("i am working!!");
+			this_image.stop(true).animate({'top':'-10px'},500);
+			largepic.attr('src', switchh);
+		     }
 
-		this_image.mouseover(image_over);
-		this_image.mouseout(image_out);
+			function image_out() {
+				//console.log("i am working!!");
+			this_image.stop(true).animate({'top':'0px'},500);
+	        }
 
-		}
-		//3. trigger or call
-		image_swap(pic1); 
-		image_swap(pic2);
-		image_swap(pic3);
+			this_image.mouseover(image_over);
+			this_image.mouseout(image_out);
 
-		 $(function() {
-		 $( "#selectable" ).selectable();
+			}
+			//3. trigger or call
+			image_swap(pic1); 
+			image_swap(pic2);
+			image_swap(pic3);
+
+			 $(function() {
+			 $( "#selectable" ).selectable();
+			 });
+
 		 });
